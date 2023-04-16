@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { Image } from 'react-native';
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { AntDesign } from '@expo/vector-icons'; 
+
 
 export default function App() {
 
@@ -11,24 +13,16 @@ export default function App() {
       <StatusBar hidden/>
       <View>
         <ImageBackground source={image} style={styles.image}></ImageBackground>
+        <AntDesign name="minus" size={24} color="black" />
       </View>
-      <StatusBar style="auto" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#111',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
   image:{
     resizeMode: 'cover',
     Width: '100%',
-    height:'50%'
+    height:'40%'
   }
-
 });
